@@ -1,6 +1,6 @@
 # Section 2.3: claim-to-evidence index
 
-This index is designed to accompany the latest thesis draft, **Section 2.3, report pages 23–27**. Each row states what the review claims, identifies the supporting evidence and specifies what the evidence **does not** establish. Claims concerning tool design come from the developer's repository documentation; independent experimental observations come from files in this archive.
+This index is designed to accompany the latest draft, **Section 2.3**. Each row states what the review claims, identifies the supporting evidence and specifies what the evidence **does not** establish. Claims concerning tool design come from the developer's repository documentation; independent experimental observations come from files in this archive.
 
 ## CodeGraph (Section 2.3.1)
 
