@@ -1,0 +1,261 @@
+PHPUnit 11.5.56 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.5.0
+Configuration: <RESEARCH_ROOT>/runtime-labs/mapin-l12/phpunit.xml
+
+.....
+   PASS  Tests\Unit\CommunityDetectorTest
+  ✓ it excludes a clear hub from Louvain, splits the two triangles it was bridging, then reattaches it by strongest edge                                                                                 0.20s  
+  ✓ it clears a stale community assignment from a node that no longer qualifies for the projection                                                                                                       0.10s  
+  ✓ it never assigns a community to an external node or a vendor-indexed class                                                                                                                           0.09s  
+  ✓ it produces the same community assignment and summary across repeated runs                                                                                                                           0.09s  
+  ✓ it writes a community summary with size, top nodes and dominant namespaces                                                                                                                           0.07s  
+...
+   PASS  Tests\Unit\ExtractorMemoryTest
+  ✓ it does not keep a file's AST once extract() has returned                                                                                                                                            0.79s  
+  ✓ it parses a PHP file again with its names resolved
+  ✓ it has no statements for a file that is not PHP or does not parse
+.......
+   PASS  Tests\Unit\LouvainTest
+  ✓ it splits two triangles joined by a single bridge edge into two communities
+  ✓ it produces the same result on the same graph across repeated runs
+  ✓ it assigns each disconnected component its own community
+  ✓ it gives an isolated node its own community
+  ✓ it relabels every community by its own lowest member id, not an aggregation artifact
+  ✓ it weighted graph counts a self-loop twice toward its own node degree
+  ✓ it weighted graph sums weight on repeated edges between the same pair instead of overwriting
+.................
+   PASS  Tests\Unit\MemoryLimitTest
+  ✓ it parses PHP shorthand into bytes and rejects anything else with ('128M', 134217728)
+  ✓ it parses PHP shorthand into bytes and rejects anything else with ('1G', 1073741824)
+  ✓ it parses PHP shorthand into bytes and rejects anything else with ('1024k', 1048576)
+  ✓ it parses PHP shorthand into bytes and rejects anything else with ('512', 512)
+  ✓ it parses PHP shorthand into bytes and rejects anything else with ('-1', -1)
+  ✓ it parses PHP shorthand into bytes and rejects anything else with (' 2g ', 2147483648)
+  ✓ it parses PHP shorthand into bytes and rejects anything else with ('', null)
+  ✓ it parses PHP shorthand into bytes and rejects anything else with ('lots', null)
+  ✓ it parses PHP shorthand into bytes and rejects anything else with ('1.5G', null)
+  ✓ it raises a stock 128M limit to the target
+  ✓ it never lowers a limit that is already at or above the target
+  ✓ it leaves an unlimited limit alone
+  ✓ it honors a target of -1 by making the limit unlimited
+  ✓ it stays under half of a container limit instead of letting the kernel kill the container
+  ✓ it reads a container limit from cgroup v2 and v1, and ignores "no limit"
+  ✓ it raiseTo changes the real ini value and reports it, and restores cleanly
+  ✓ it raiseTo does nothing when disabled or given something that is not a size
+...............
+   PASS  Tests\Unit\ResolverTest
+  ✓ it resolves constructor-promoted property injection at full confidence                                                                                                                               0.06s  
+  ✓ it resolves a private constructor-injected interface via its single implementation
+  ✓ it resolves new X() at full confidence
+  ✓ it resolves app(X::class)->method() at full confidence
+  ✓ it resolves static calls on a plain class at full confidence
+  ✓ it forwards an Eloquent relation method to the related model builder
+  ✓ it types a caught exception and resolves getMessage() via the Throwable contract
+  ✓ it resolves a chain through a global helper function return type
+  ✓ it declares every fixture class as a node-producing class
+  ✓ it emits a relates edge for an Eloquent relation method
+  ✓ it maps a model to its table by naming convention
+  ✓ it records touches_table edges from a migration
+  ✓ it records a dispatches edge for a queued job
+  ✓ it records an observes edge from Model::observe()
+  ✓ it records listens edges from both a $listen property and Event::listen()
+.........
+   PASS  Tests\Unit\SqliteStoreTest
+  ✓ it insertEdges counts every row SQLite's own null-distinct UNIQUE index actually keeps, not a PHP-side tuple dedup                                                                                   0.07s  
+  ✓ it insertEdges still collapses a genuine duplicate edge (same file and line, both non-null) to the one row ON CONFLICT keeps                                                                         0.07s  
+  ✓ it findNodes surfaces an exact short-name match even when 25+ other nodes share the same substring                                                                                                   0.14s  
+  ✓ it recordQueryMiss writes one row, JSON-encoding args and suggestions                                                                                                                                0.07s  
+  ✓ it unexportedQueryMisses only returns rows markQueryMissesExported has not already covered                                                                                                           0.07s  
+  ✓ it recordBuildWarnings upserts by the warning text itself, never duplicating a warning that recurs across builds                                                                                     0.06s  
+  ✓ it recordBuildWarnings moves last_seen_at forward on a later build without touching first_seen_at                                                                                                    0.06s  
+  ✓ it recordBuildWarnings records two genuinely different warnings as two separate rows                                                                                                                 0.06s  
+  ✓ it unexportedBuildWarnings only returns rows markBuildWarningsExported has not already covered                                                                                                       0.06s  
+....
+   PASS  Tests\Feature\BladeCompilerTest
+  ✓ it resolves route(), view() and a real method call written as literal PHP inside a Blade template                                                                                                    0.50s  
+  ✓ it never reports Blade's own compiled runtime calls as unresolved                                                                                                                                    0.36s  
+  ✓ it falls back to DirectiveScanner under --no-boot: structural edges only, no compiled-PHP edges                                                                                                      0.09s  
+  ✓ it degrades to a build warning instead of aborting when a Blade file compiles to invalid PHP                                                                                                         0.10s  
+...  63 / 194 ( 32%)
+.....
+   PASS  Tests\Feature\BuildCommandTest
+  ✓ it raises its own memory_limit to mapin.memory_limit when PHP's is lower, so a stock 128M install does not die on the first build                                                                    0.36s  
+  ✓ it leaves PHP's memory_limit alone when mapin.memory_limit is null                                                                                                                                   0.27s  
+  ✓ it builds a graph from scratch and reports it                                                                                                                                                        0.29s  
+  ✓ it finds a known class by short name                                                                                                                                                                 0.30s  
+  ✓ it lists callers of a method                                                                                                                                                                         0.35s  
+  ✓ it runs a plugin extractor registered via config(mapin.extractors) alongside PhpExtractor, not instead of it                                                                                         0.29s  
+  ✓ it does not reparse unchanged files on the next build                                                                                                                                                0.32s  
+  ✓ it reports the same node and edge counts mapin:build prints as the graph actually holds                                                                                                              0.28s  
+.......
+   PASS  Tests\Feature\BuildWarningsTest
+  ✓ it records a build warning once, and the same warning recurring on a later build does not duplicate it                                                                                               0.20s  
+  ✓ it mapin:warnings exports unexported warnings to a JSONL file in the host project, then reports nothing new on the next run                                                                          0.13s  
+  ✓ it removes a warning in the build that shows its file was fixed, exported or not with dataset "already exported"                                                                                     0.14s  
+  ✓ it removes a warning in the build that shows its file was fixed, exported or not with dataset "never exported"                                                                                       0.14s  
+  ✓ it keeps the warning of a file that is still broken through an incremental build that does not touch it                                                                                              0.13s  
+  ✓ it removes the warning of a file that was deleted                                                                                                                                                    0.12s  
+  ✓ it leaves a warning that names no file alone                                                                                                                                                         0.07s  
+...........
+   PASS  Tests\Feature\DoctorHonestyTest
+  ✓ it says unknown, not current, when it cannot read a HEAD commit to compare against                                                                                                                   0.33s  
+  ✓ it still says current after a fresh build in a real git repository, with status pass                                                                                                                 0.48s  
+  ✓ it reads HEAD from a linked git worktree, where .git is a file and not a directory                                                                                                                   0.12s  
+  ✓ it computes the unresolved ratio over the project's own files and reports the whole-graph one beside it                                                                                              0.42s  
+  ✓ it counts edges and unresolved references from project files only                                                                                                                                    0.47s  
+  ✓ it shows a release tag without its leading v and leaves anything else as it is with ('v0.2.5', '0.2.5')                                                                                              0.04s  
+  ✓ it shows a release tag without its leading v and leaves anything else as it is with ('0.2.5', '0.2.5')                                                                                               0.03s  
+  ✓ it shows a release tag without its leading v and leaves anything else as it is with ('dev-main', 'dev-main')                                                                                         0.03s  
+  ✓ it shows a release tag without its leading v and leaves anything else as it is with ('1.0.0+no-version-set', '1.0.0+no-version-set')                                                                 0.03s  
+  ✓ it shows a release tag without its leading v and leaves anything else as it is with ('', null)                                                                                                       0.03s  
+  ✓ it shows a release tag without its leading v and leaves anything else as it is with (null, null)                                                                                                     0.04s  
+......................
+   PASS  Tests\Feature\FindAliasesTest
+  ✓ it labels the three base rules too, so a caller always sees why a row came back                                                                                                                      5.37s  
+  ✓ it labels a fuzzy look-alike as fuzzy, with the lower confidence                                                                                                                                     0.84s  
+  ✓ it finds a method by Class::method, Class@method and a namespace-qualified Class::method with dataset "short class"                                                                                  0.81s  
+  ✓ it finds a method by Class::method, Class@method and a namespace-qualified Class::method with dataset "route-action spelling"                                                                        0.88s  
+  ✓ it finds a method by Class::method, Class@method and a namespace-qualified Class::method with dataset "trailing parentheses"                                                                         0.83s  
+  ✓ it finds a method by Class::method, Class@method and a namespace-qualified Class::method with dataset "trailing namespace segments"                                                                  0.83s  
+  ✓ it finds a method by Class::method, Class@method and a namespace-qualified Class::method with dataset "full FQCN"                                                                                    0.82s  
+  ✓ it finds a method by Class::method, Class@method and a namespace-qualified Class::method with dataset "FQCN with leading backslash"                                                                  0.83s  
+  ✓ it does not answer Class::method for a method the class does not declare, or a class name that is only a substring with dataset "method missing"                                                     0.86s  
+  ✓ it does not answer Class::method for a method the class does not declare, or a class name that is only a substring with dataset "class is only a suffix of the real name"                            0.80s  
+  ✓ it does not answer Class::method for a method the class does not declare, or a class name that is only a substring with dataset "segments cut mid-name"                                              0.45s  
+  ✓ it finds a route by its name, which a route node only carries in its meta                                                                                                                            0.34s  
+  ✓ it treats a name as a URI only when it contains a slash                                                                                                                                              0.33s  
+  ✓ it does not take a partial URI for the route                                                                                                                                                         0.30s  
+  ✓ it finds every use of a middleware alias, and still finds a single use by its full name                                                                                                              0.30s  
+  ✓ it finds a class by a trailing run of whole namespace segments, and by FQCN with a leading backslash                                                                                                 0.35s  
+  ✓ it finds the class that handles an Artisan command by the command name                                                                                                                               0.37s  
+  ✓ it keeps the command name across an incremental build that does not touch the file                                                                                                                   0.32s  
+  ✓ it respects the type filter for every rule                                                                                                                                                           0.29s  
+  ✓ it still answers found: false with suggestions, not a guess, for a name no rule identifies                                                                                                           0.30s  
+  ✓ it returns each node once even when two rules identify it                                                                                                                                            0.31s  
+  ✓ it lets the route tool take a bare URI when exactly one method serves it, and lists the candidates when several do                                                                                   0.29s  
+.......
+   PASS  Tests\Feature\FullBuildSafetyTest
+  ✓ it carries the misses, warnings and build history of the old graph into a full rebuild, ids and export marks included                                                                                0.54s  
+  ✓ it leaves the live graph exactly as it was when a full build fails halfway, and leaves no half-built file                                                                                            0.32s  
+  ✓ it still builds when the first full build has nothing to carry over                                                                                                                                  0.26s  
+  ✓ it throws away what an earlier crashed build left behind and builds anyway                                                                                                                           0.27s  
+  ✓ it does not leave the old graph's journal next to the new file                                                                                                                                       0.48s  
+  ✓ it keeps the history when the schema version changes and the graph is reset                                                                                                                          0.35s  
+  ✓ it reads history from a graph without creating one, and treats a file that is not a database as empty                                                                                                0.02s  
+.
+   PASS  Tests\Feature\GoldenTest
+  ✓ it matches the committed snapshot of every node and edge the fixture app produces                                                                                                                    0.22s  
+.....
+   PASS  Tests\Feature\HardeningTest
+  ✓ it resolves routes_to for an invokable controller registered with no @method                                                                                                                         0.29s  
+  ✓ it prefers a model's declared $table over the naming convention                                                                                                                                      0.32s  
+  ✓ it records a schedules edge from Schedule->job()                                                                                                                                                     0.33s  
+  ✓ it resolves a middleware alias to its registered class                                                                                                                                               0.33s  
+  ✓ it model() reports not found rather than guessing when a search term matches several classes, none exactly                                                                                           0.32s  
+.
+   PASS  Tests\Feature\IncrementalInvalidationTest
+  ✓ it re-resolves an unchanged file when a method it depends on gains a return type                                                                                                                     0.34s  
+.... 126 / 194 ( 64%)
+.
+   PASS  Tests\Feature\InstallHooksCommandTest
+  ✓ it installs a post-commit and post-merge hook that runs the given command in the background                                                                                                          0.05s  
+  ✓ it is idempotent - running it twice does not duplicate the installed block                                                                                                                           0.04s  
+  ✓ it preserves an existing hook's own content instead of overwriting it                                                                                                                                0.05s  
+  ✓ it reinstalling with a different --command replaces only mapin's own block, not the rest of the file                                                                                                 0.05s  
+  ✓ it fails cleanly when the project is not a git repository                                                                                                                                            0.04s  
+......
+   PASS  Tests\Feature\McpLegacyHandshakeTest
+  ✓ it answers a classic initialize handshake                                                                                                                                                            0.33s  
+  ✓ it lets a full legacy session through - initialize, the initialized notification, then tools/list with no per-request _meta                                                                          0.33s  
+  ✓ it answers ping, which clients send to check the server is still alive                                                                                                                               0.29s  
+  ✓ it treats a legacy request carrying _meta for something else (e.g. a progress token) as legacy too, not as a modern one missing protocolVersion                                                      0.31s  
+  ✓ it still enforces _meta.protocolVersion strictly for a modern MCP 2026-07-28 request - the legacy relaxation never leaks into that path                                                              0.29s  
+  ✓ it reports the installed package version in the MCP serverInfo instead of laravel/mcp's 0.0.1                                                                                                        0.28s  
+........
+   PASS  Tests\Feature\Phase2Test
+  ✓ it extracts every registered route                                                                                                                                                                   0.31s  
+  ✓ it links a route to its controller method                                                                                                                                                            0.29s  
+  ✓ it resolves route() to the named route via the route name map                                                                                                                                        0.30s  
+  ✓ it extracts a container binding and uses it to resolve an interface call                                                                                                                             0.29s  
+  ✓ it extracts view nodes and includes/component edges from Blade files                                                                                                                                 0.30s  
+  ✓ it shows a model summary with table and relations                                                                                                                                                    0.29s  
+  ✓ it impact lists the route reaching a deeply-called service method                                                                                                                                    0.30s  
+  ✓ it impact on a whole class reaches the routes/calls that target its own methods, not just doc mentions                                                                                               0.30s  
+...........
+   PASS  Tests\Feature\Phase3Test
+  ✓ it answers a real MCP tools/call for find, with the response envelope                                                                                                                                0.31s  
+  ✓ it answers a real MCP tools/call for route, resolving the handler                                                                                                                                    0.29s  
+  ✓ it answers a real MCP tools/call for impact                                                                                                                                                          0.30s  
+  ✓ it answers a real MCP tools/call for stats with no arguments                                                                                                                                         0.30s  
+  ✓ it returns found: false with labelled suggestions, never a guess, for a node that does not exist                                                                                                     0.31s  
+  ✓ it resolves a class by short name through find without fuzzy, and rejects a real substring without it                                                                                                0.31s  
+  ✓ it drives the exact same tool through mapin:query as the MCP server does                                                                                                                             0.29s  
+  ✓ it accepts --json on mapin:query like every other command, which the README quick start uses                                                                                                         0.30s  
+  ✓ it passes typed arguments through mapin:query                                                                                                                                                        0.30s  
+  ✓ it reports a clean bill of health via mapin:doctor after a build                                                                                                                                     0.29s  
+  ✓ it mapin:doctor reports graph_staleness ok right after a fresh build, in a real git repo                                                                                                             0.59s  
+..............
+   PASS  Tests\Feature\Phase4Test
+  ✓ it creates a doc node per Markdown file and a section node per heading, with GitHub-style anchors                                                                                                    0.29s  
+  ✓ it links a backticked FQCN mention to the class it names                                                                                                                                             0.28s  
+  ✓ it links a plain (non-backticked) class mention by its short name                                                                                                                                    0.27s  
+  ✓ it links a backticked route name mention to the route                                                                                                                                                0.29s  
+  ✓ it links a plain route URI mention to the route, found by the URI itself rather than backticks                                                                                                       0.28s  
+  ✓ it links a backticked file path mention to the file it names                                                                                                                                         0.28s  
+  ✓ it links backticked table mentions to both an overridden and a conventional table name                                                                                                               0.29s  
+  ✓ it resolves a class mention in a second Markdown file against the same graph                                                                                                                         0.29s  
+  ✓ it records a same-file anchor link as a links_doc edge back to its own doc node                                                                                                                      0.30s  
+  ✓ it resolves a relative cross-file link in both directions                                                                                                                                            0.29s  
+  ✓ it records an ambiguous short name mention as unresolved instead of guessing between a route and a view                                                                                              0.31s  
+  ✓ it docs tool reports the sections that document a class, and the nodes a section documents                                                                                                           0.29s  
+  ✓ it impact groups a documenting section under docs                                                                                                                                                    0.29s  
+  ✓ it mapin:docs builds the graph and reports doc/section/edge counts                                                                                                                                   0.32s  
+........
+   PASS  Tests\Feature\Phase5Test
+  ✓ it communities tool reports not found before mapin:communities has run                                                                                                                               0.29s  
+  ✓ it mapin:communities assigns communities, and node() surfaces membership through its own generic meta                                                                                                0.30s  
+  ✓ it communities tool reports the summary once mapin:communities has run                                                                                                                               0.31s  
+  ✓ it produces the same community assignment across two separate mapin:communities runs                                                                                                                 0.35s  
+  ✓ it never assigns a community to an external or vendor-indexed node                                                                                                                                   0.32s  
+  ✓ it hubs tool reports degree always, and bridges only once communities have been computed                                                                                                             0.32s  
+  ✓ it hubs tool respects a types filter                                                                                                                                                                 0.28s  
+  ✓ it drives hubs and communities through mapin:query exactly like the MCP server would                                                                                                                 0.31s  
+.......
+   PASS  Tests\Feature\Phase6Test
+  ✓ it never calls the configured LLM driver without --with-llm, even when one is configured and unreachable                                                                                             0.19s  
+  ✓ it mapin:docs --with-llm defaults to NullClient: zero concepts, driver reported as null                                                                                                              0.20s  
+  ✓ it creates concept nodes and mentions/relates_concept edges with source and model meta                                                                                                               0.19s  
+  ✓ it skips every section on a second run when nothing changed, without calling the client again                                                                                                        0.20s  
+  ✓ it regenerating with a different model invalidates the cache instead of reading it as already handled                                                                                                0.19s  
+  ✓ it reprocesses only the section whose content changed, leaving the other cached                                                                                                                      0.19s  
+  ✓ it records a warning and keeps processing other sections when the client fails for one                                                                                                               0.20s  
+........ 189 / 194 ( 97%)
+.
+   PASS  Tests\Feature\Phase7Test
+  ✓ it links an axios method call to the route its literal URL matches                                                                                                                                   0.30s  
+  ✓ it links a plain fetch call (no explicit method) to the route by URL alone                                                                                                                           0.30s  
+  ✓ it records the detected verb and url in the edge meta                                                                                                                                                0.30s  
+  ✓ it links a jQuery $.ajax object-form call and a $.get shorthand call                                                                                                                                 0.29s  
+  ✓ it ignores a call whose literal URL matches no route at all                                                                                                                                          0.29s  
+  ✓ it records a genuinely ambiguous URL as unresolved with every candidate route, never a guess                                                                                                         0.30s  
+  ✓ it a known verb resolves cleanly to its own route even when the same URL is registered under another verb too                                                                                        0.29s  
+  ✓ it a bare call with no method key defaults to GET, the documented library default, not an unknown verb                                                                                               0.29s  
+  ✓ it impact includes the JS file under a dedicated js_files bucket                                                                                                                                     0.34s  
+...
+   PASS  Tests\Feature\QueryMissesTest
+  ✓ it records a query miss when a tool answers found: false, but not when the result is merely an empty list                                                                                            0.31s  
+  ✓ it mapin:misses exports unexported misses to a JSONL file in the host project, then reports nothing new on the next run                                                                              0.31s  
+  ✓ it mapin:misses only exports misses recorded since the last export, appending rather than overwriting                                                                                                0.31s  
+.                                                           194 / 194 (100%)
+   PASS  Tests\Feature\VendorMethodPersistenceTest
+  ✓ it keeps resolving a call chain through a vendor class method after an incremental build that never re-parses that vendor file                                                                       0.13s  
+
+  Tests:    194 passed (575 assertions)
+  Duration: 49.90s
+
+
+
+Time: 00:49.685, Memory: 52.50 MB
+
+OK (194 tests, 575 assertions)

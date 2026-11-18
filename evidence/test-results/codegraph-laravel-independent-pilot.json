@@ -1,0 +1,58 @@
+{
+    "R01_direct_route": [
+        {
+            "kind": "route",
+            "source": "\\Route",
+            "destination": "UserController@index",
+            "line": 2,
+            "metadata": "method:GET,path:/users"
+        }
+    ],
+    "R02_resource_route": [],
+    "R03_imported_controller": [
+        {
+            "kind": "route",
+            "source": "\\Route",
+            "destination": "UserController@index",
+            "line": 3,
+            "metadata": "method:GET,path:/users"
+        }
+    ],
+    "E01_has_many": [
+        {
+            "kind": "relation_hasMany",
+            "source": "App\\Models\\User",
+            "destination": "Post",
+            "line": 5,
+            "metadata": "relation_type:hasMany"
+        }
+    ],
+    "E02_morph_to": [],
+    "E03_two_classes": [
+        {
+            "kind": "relation_hasMany",
+            "source": "App\\Models\\First",
+            "destination": "Post",
+            "line": 6,
+            "metadata": "relation_type:hasMany"
+        }
+    ],
+    "B01_container_binding": [
+        {
+            "kind": "service_binding",
+            "source": "App\\Providers\\AppServiceProvider",
+            "destination": "Implementation",
+            "line": 5,
+            "metadata": "binding_type:bind,abstract:Contract"
+        }
+    ],
+    "B02_unrelated_bind": [
+        {
+            "kind": "service_binding",
+            "source": "App\\Services\\RuleBuilder",
+            "destination": "B",
+            "line": 5,
+            "metadata": "binding_type:bind,abstract:A"
+        }
+    ]
+}

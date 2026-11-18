@@ -1,0 +1,51 @@
+AST-Graph RAG Existing Systems Evidence Inventory
+2026-11-14T00:20:33+08:00
+
+===== BookStack revision =====
+31d94dd8b98e3334dc01b66bed6d514719a2f85d
+
+===== Existing-system repository revisions =====
+existing-systems/codegraph-core | 0fd5b9a86939efdaa7f71ef462a4e1c47c064e21
+existing-systems/codegraph-laravel | 543b5ba320653e3206aebcff27c22ffda095c1d9
+existing-systems/mapin | 9ae585e9b1b025d298ba709c55969152ea37bc76
+existing-systems/nexus | f305875dbec95e81f53d1e921e1bd10cd3ac056c
+runtime-labs/codegraph-core | 0fd5b9a86939efdaa7f71ef462a4e1c47c064e21
+runtime-labs/codegraph-laravel | 543b5ba320653e3206aebcff27c22ffda095c1d9
+runtime-labs/mapin | 9ae585e9b1b025d298ba709c55969152ea37bc76
+runtime-labs/mapin-l12 | 9ae585e9b1b025d298ba709c55969152ea37bc76
+runtime-labs/nexus | f305875dbec95e81f53d1e921e1bd10cd3ac056c
+
+===== Evidence files and SHA-256 checksums =====
+2f79b5aeec33eaa3897df0687dc427a1f5e815c4ee9e3d232bdd15883d2430e1  evidence/test-results/codegraph-bookstack-diagnostics.json
+ea528724d249cad15de6db83bc3ea45a9bff59bc97f78c76756d32fa9320773a  evidence/test-results/codegraph-bookstack-summary.json
+db576a7b2ccb307d23ebc28a847b770929779579734687ed66c6f41126558b1a  evidence/test-results/codegraph-core-phpunit.txt
+0a676d5e949b65364181b4360918a3f9ce53280ba7711ec30018c2a149135b53  evidence/test-results/codegraph-full-pipeline.json
+ca0d2c54499165f4fa0c677c495a71c2c9bf7fca02d7048a66a58462aa4ec579  evidence/test-results/codegraph-laravel-independent-pilot.json
+618f658d6d19f91c4b86de4f0d9aae24e5dacaf792d9d426460fb1da21bd79ec  evidence/test-results/codegraph-laravel-phpunit.txt
+42d5e7de8fd74f821d0626b14faad473348418097b185ff9968db3cf699a8df8  evidence/test-results/mapin-bookstack-static.json
+5bdce47436ffca5afbee45550ed24d561541d2155ab8bdedb5399b05b86913d1  evidence/test-results/mapin-bookstack-static.sqlite
+53bb9850b0b63985907e1d2fe83013fefd2894b850c2c34bf92fdc42fe014d25  evidence/test-results/mapin-composer-dry-run.txt
+e641ab8c9b6cee72cdfb91f8119764919329cc286b4702805d42f737a7ef40a3  evidence/test-results/mapin-composer-install.txt
+7fb37e3d36f0d3224de0510a1538708d1dbd1193ae926d0b40fc111cb801ffc4  evidence/test-results/mapin-controlled-fixture-build.json
+7fecb2aa4de31197e1b0cffffc17e0807a4fa1325e4ecf05dcbf28dbc3f09805  evidence/test-results/mapin-controlled-fixture-edges.json
+43780cc092863b1bd6aba4a69f4e009326f7411a0f7d48bbd695cbad55a87648  evidence/test-results/mapin-controlled-fixture.sqlite
+3d5e7768ac90a0b830454426e4b674314c88b2c27dff1a9f1363355558c8fb31  evidence/test-results/mapin-l12-composer-dry-run.txt
+8cdeca0eb02e3913c846a0df6b2076bc9c6bcf11655fc9a07e346c30e3368887  evidence/test-results/mapin-l12-composer-install.txt
+d9ced4054425d5ad72cb66109fe7709c2960cbd646aaa0da2bea05fc5d152426  evidence/test-results/mapin-l12-framework-pilot.json
+8d71c6b6a73242161eb0a50e5d2601854c818c031c8c325c551d2bedea0a115a  evidence/test-results/mapin-l12-framework-pilot.sqlite
+d2537f6d666c180207595d37fc425824472b0156cfd6d83acaeb097b37a0caea  evidence/test-results/mapin-l12-pest.txt
+2f5d22df50a3bec61e67392e007b4c41293fbeec20f7b98237f147f90f3b90b3  evidence/test-results/mapin-pest.txt
+644fe442056746dd7609e26ebc4b726f1aecc697a3693030ca7423b3ac12e74a  evidence/test-results/nexus-bookstack-chunking-scan.json
+22ace430d49684ac5eaf0baf410b2d8c39842f72253c086dab54e0d76b37dc70  evidence/test-results/nexus-chunking-pilot.json
+b5cc93b01384c24f79a278d627ba0ae5d7223ec2b33baa51529e8b03a8df4195  evidence/test-results/nexus-graph-query-pilot.json
+b0579ed028d4ec4f39fb35aaee07c90756b5810f0dac087b45473cfa1cda2355  evidence/test-results/nexus-php-composer-audit.json
+41e40a9104d3ee5dfbf83b93d45e12d5deeb6f55db09e2ef64082e5115df1f21  evidence/test-results/nexus-php-composer-dry-run.txt
+b5e507ab426921b7eefcb81dfe419e66a593c8e0096e1788ce3ae02c8567b297  evidence/test-results/nexus-php-composer-install.txt
+d22315a7f5c36322d51e9edd97a01d321d90a0f80fd64763d845156569fb0f25  evidence/test-results/nexus-php-phpunit-retest.txt
+03d6bc26b0d8540e4bd6b51cbee6f7f3beac441f9711b962f93edf5cf89c4c90  evidence/test-results/nexus-php-phpunit.txt
+e508037c9ada08eb112a0a02989aa127a7aacaf6eda631bdd40cc65f40a97854  evidence/test-results/nexus-php-targeted-retest.txt
+0056eebeebba506de6719a2faaf2830aa22e4e6bc7bb5b8761383268b3be0665  evidence/test-results/nexus-python-freeze.txt
+3b52b8cfb64dee5581a136023dc3622274446721852f2769a67ae0f8d016f707  evidence/test-results/nexus-python-install.txt
+922b6f4f82da48e27cef045fd1963c2b04a8c8c126258c77e5eeb0213bd33be8  evidence/test-results/nexus-python-pytest.txt
+607fb4d4b0282cccca9a601996a1263201f8938409cf322eee67baeecdb4fc60  evidence/test-results/nexus-semantic-graph-pilot.txt
+d94b70347df0b02f3957639cd8d5ea1f6076afc4301a2357da5cdd441152499c  evidence/test-results/nexus-semantic-top1-contrast.txt

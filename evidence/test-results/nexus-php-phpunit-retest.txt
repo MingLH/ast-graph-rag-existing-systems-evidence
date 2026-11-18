@@ -1,0 +1,14 @@
+PHPUnit 12.5.44 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.5.0
+Configuration: <RESEARCH_ROOT>/runtime-labs/nexus/packages/nexus-extractor-php/phpunit.xml
+Random Seed:   1794579951
+
+[33;1mD[0m[33;1mD[0m[33;1mD[0m[33;1mD[0m[33;1mD[0m[33;1mD[0m[33;1mD[0m[33;1mD[0m.......................................................  63 / 163 ( 38%)
+.....................................[33;1mD[0m[33;1mD[0m[33;1mD[0m[33;1mD[0m...................[33;1mD[0m[33;1mD[0m. 126 / 163 ( 77%)
+.....................................                           163 / 163 (100%)
+
+Time: 00:03.247, Memory: 106.50 MB
+
+[30;43mOK, but there were issues![0m
+[30;43mTests: 163[0m[30;43m, Assertions: 414[0m[30;43m, Deprecations: 2[0m[30;43m.[0m

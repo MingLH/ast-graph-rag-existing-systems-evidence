@@ -1,0 +1,89 @@
+{
+  "experiment": "nexus_bookstack_php_chunking_scan",
+  "scope": [
+    "app/**/*.php",
+    "routes/**/*.php"
+  ],
+  "files_scanned": 524,
+  "total_chunks": 2752,
+  "chunk_kinds": {
+    "class_header": 479,
+    "enum_header": 3,
+    "function": 6,
+    "interface_header": 15,
+    "method": 2244,
+    "trait_header": 5
+  },
+  "zero_chunk_file_count": 21,
+  "zero_chunk_files_sample": [
+    "app/Config/api.php",
+    "app/Config/app.php",
+    "app/Config/auth.php",
+    "app/Config/cache.php",
+    "app/Config/clockwork.php",
+    "app/Config/database.php",
+    "app/Config/debugbar.php",
+    "app/Config/exports.php",
+    "app/Config/filesystems.php",
+    "app/Config/hashing.php",
+    "app/Config/logging.php",
+    "app/Config/mail.php",
+    "app/Config/oidc.php",
+    "app/Config/queue.php",
+    "app/Config/saml2.php",
+    "app/Config/services.php",
+    "app/Config/session.php",
+    "app/Config/setting-defaults.php",
+    "app/Config/view.php",
+    "routes/api.php",
+    "routes/web.php"
+  ],
+  "median_chunks_per_file": 4.0,
+  "max_chunks_per_file": 37,
+  "top_files_by_chunk_count": [
+    {
+      "file": "app/Entities/Models/Entity.php",
+      "chunks": 37
+    },
+    {
+      "file": "app/Search/SearchRunner.php",
+      "chunks": 29
+    },
+    {
+      "file": "app/Users/Models/User.php",
+      "chunks": 27
+    },
+    {
+      "file": "app/Entities/Controllers/PageController.php",
+      "chunks": 22
+    },
+    {
+      "file": "app/Settings/SettingService.php",
+      "chunks": 22
+    },
+    {
+      "file": "app/Uploads/ImageService.php",
+      "chunks": 22
+    },
+    {
+      "file": "app/Access/LdapService.php",
+      "chunks": 21
+    },
+    {
+      "file": "app/Entities/Tools/PageContent.php",
+      "chunks": 19
+    },
+    {
+      "file": "app/Entities/Tools/TrashCan.php",
+      "chunks": 19
+    },
+    {
+      "file": "app/Users/UserRepo.php",
+      "chunks": 19
+    }
+  ],
+  "method_chunks_checked": 2244,
+  "method_source_mismatches": 0,
+  "duplicate_chunk_id_count": 0,
+  "duration_seconds": 1.098
+}

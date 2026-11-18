@@ -1,0 +1,232 @@
+{
+    "repository": "<BOOKSTACK_ROOT>",
+    "mode": "static_no_boot",
+    "scan_paths": [
+        "app",
+        "routes"
+    ],
+    "vendor_indexing": false,
+    "build_report": {
+        "mode": "full",
+        "files_seen": 524,
+        "files_changed": 524,
+        "files_affected": 0,
+        "files_deleted": 0,
+        "nodes": 3595,
+        "edges": 9628,
+        "unresolved": 1037,
+        "duration_seconds": 5.165,
+        "warnings": []
+    },
+    "stored_counts": {
+        "files": 524,
+        "nodes": 3595,
+        "edges": 9628,
+        "unresolved": 1037
+    },
+    "edge_types": [
+        {
+            "type": "calls",
+            "total": 5781
+        },
+        {
+            "type": "declares",
+            "total": 2752
+        },
+        {
+            "type": "instantiates",
+            "total": 614
+        },
+        {
+            "type": "extends",
+            "total": 176
+        },
+        {
+            "type": "renders",
+            "total": 124
+        },
+        {
+            "type": "relates",
+            "total": 71
+        },
+        {
+            "type": "implements",
+            "total": 47
+        },
+        {
+            "type": "maps_table",
+            "total": 37
+        },
+        {
+            "type": "dispatches",
+            "total": 17
+        },
+        {
+            "type": "touches_table",
+            "total": 7
+        },
+        {
+            "type": "resolves",
+            "total": 2
+        }
+    ],
+    "unresolved_types": [
+        {
+            "kind": "calls",
+            "total": 1033
+        },
+        {
+            "kind": "instantiates",
+            "total": 3
+        },
+        {
+            "kind": "view",
+            "total": 1
+        }
+    ],
+    "sample_edges": {
+        "calls": [
+            {
+                "type": "calls",
+                "source": "method:BookStack\\Access\\Controllers\\ConfirmEmailController::showAwaiting",
+                "destination": "method:BookStack\\Access\\LoginService::getLastLoginAttemptUser",
+                "file": "app/Access/Controllers/ConfirmEmailController.php",
+                "line": 39,
+                "resolution": "typed_property",
+                "confidence": 1
+            },
+            {
+                "type": "calls",
+                "source": "method:BookStack\\Access\\Controllers\\ConfirmEmailController::showAwaiting",
+                "destination": "method:BookStack\\Http\\Controller::showErrorNotification",
+                "file": "app/Access/Controllers/ConfirmEmailController.php",
+                "line": 41,
+                "resolution": "this",
+                "confidence": 1
+            },
+            {
+                "type": "calls",
+                "source": "method:BookStack\\Access\\Controllers\\ConfirmEmailController::confirm",
+                "destination": "class:BookStack\\Access\\Controllers\\ConfirmEmailController",
+                "file": "app/Access/Controllers/ConfirmEmailController.php",
+                "line": 64,
+                "resolution": "this",
+                "confidence": 1
+            },
+            {
+                "type": "calls",
+                "source": "method:BookStack\\Access\\Controllers\\ConfirmEmailController::confirm",
+                "destination": "method:BookStack\\Access\\UserTokenService::checkTokenAndGetUserId",
+                "file": "app/Access/Controllers/ConfirmEmailController.php",
+                "line": 71,
+                "resolution": "typed_property",
+                "confidence": 1
+            },
+            {
+                "type": "calls",
+                "source": "method:BookStack\\Access\\Controllers\\ConfirmEmailController::confirm",
+                "destination": "method:BookStack\\Http\\Controller::showErrorNotification",
+                "file": "app/Access/Controllers/ConfirmEmailController.php",
+                "line": 73,
+                "resolution": "this",
+                "confidence": 1
+            }
+        ],
+        "injects": [],
+        "renders": [
+            {
+                "type": "renders",
+                "source": "method:BookStack\\Access\\Controllers\\ConfirmEmailController::show",
+                "destination": "view:auth.register-confirm",
+                "file": "app/Access/Controllers/ConfirmEmailController.php",
+                "line": 30,
+                "resolution": null,
+                "confidence": null
+            },
+            {
+                "type": "renders",
+                "source": "method:BookStack\\Access\\Controllers\\ConfirmEmailController::showAwaiting",
+                "destination": "view:auth.register-confirm-awaiting",
+                "file": "app/Access/Controllers/ConfirmEmailController.php",
+                "line": 45,
+                "resolution": null,
+                "confidence": null
+            },
+            {
+                "type": "renders",
+                "source": "method:BookStack\\Access\\Controllers\\ConfirmEmailController::showAcceptForm",
+                "destination": "view:auth.register-confirm-accept",
+                "file": "app/Access/Controllers/ConfirmEmailController.php",
+                "line": 53,
+                "resolution": null,
+                "confidence": null
+            },
+            {
+                "type": "renders",
+                "source": "method:BookStack\\Access\\Controllers\\ForgotPasswordController::showLinkRequestForm",
+                "destination": "view:auth.passwords.email",
+                "file": "app/Access/Controllers/ForgotPasswordController.php",
+                "line": 24,
+                "resolution": null,
+                "confidence": null
+            },
+            {
+                "type": "renders",
+                "source": "method:BookStack\\Access\\Controllers\\LoginController::getLogin",
+                "destination": "view:auth.login-initiate",
+                "file": "app/Access/Controllers/LoginController.php",
+                "line": 49,
+                "resolution": null,
+                "confidence": null
+            }
+        ],
+        "relates": [
+            {
+                "type": "relates",
+                "source": "class:BookStack\\Access\\SocialAccount",
+                "destination": "class:BookStack\\Users\\Models\\User",
+                "file": "app/Access/SocialAccount.php",
+                "line": null,
+                "resolution": null,
+                "confidence": null
+            },
+            {
+                "type": "relates",
+                "source": "class:BookStack\\Activity\\Models\\Activity",
+                "destination": "class:BookStack\\Permissions\\Models\\JointPermission",
+                "file": "app/Activity/Models/Activity.php",
+                "line": null,
+                "resolution": null,
+                "confidence": null
+            },
+            {
+                "type": "relates",
+                "source": "class:BookStack\\Activity\\Models\\Activity",
+                "destination": "class:BookStack\\Users\\Models\\User",
+                "file": "app/Activity/Models/Activity.php",
+                "line": null,
+                "resolution": null,
+                "confidence": null
+            },
+            {
+                "type": "relates",
+                "source": "class:BookStack\\Activity\\Models\\Comment",
+                "destination": "class:BookStack\\Permissions\\Models\\JointPermission",
+                "file": "app/Activity/Models/Comment.php",
+                "line": null,
+                "resolution": null,
+                "confidence": null
+            },
+            {
+                "type": "relates",
+                "source": "class:BookStack\\Activity\\Models\\Comment",
+                "destination": "class:BookStack\\Activity\\Models\\Comment",
+                "file": "app/Activity/Models/Comment.php",
+                "line": null,
+                "resolution": null,
+                "confidence": null
+            }
+        ],
+        "routes_to": []
+    }
+}

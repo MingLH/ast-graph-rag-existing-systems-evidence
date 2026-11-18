@@ -1,0 +1,25 @@
+2026-11-13 23:14:46 [debug    ] tool_executed                  duration_ms=22.85 tool=semantic_search
+{
+  "experiment": "nexus_top1_graph_expansion_contrast",
+  "available_vectors": 3,
+  "raw_candidate_ids": [
+    "method:App\\Http\\Controllers\\CustomersController::index"
+  ],
+  "returned_ids": [
+    "method:App\\Http\\Controllers\\CustomersController::index"
+  ],
+  "related_routes": [
+    "GET /api/v1/customers"
+  ],
+  "checks": {
+    "three_vectors_available": true,
+    "only_one_vector_requested": true,
+    "raw_hit_is_index": true,
+    "graph_has_related_route": true,
+    "semantic_query_success": true,
+    "one_result_returned": true,
+    "returned_only_vector_candidate": true,
+    "route_attached_as_annotation": true,
+    "route_not_added_as_result": true
+  }
+}

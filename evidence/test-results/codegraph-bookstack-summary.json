@@ -1,0 +1,220 @@
+{
+    "repository": "<BOOKSTACK_ROOT>",
+    "stats": {
+        "symbols": 2725,
+        "edges": 11178,
+        "chunks": 2725,
+        "files": 524
+    },
+    "files_scanned": 524,
+    "files_failed": 0,
+    "errors": [],
+    "edge_kinds": [
+        {
+            "kind": "calls",
+            "total": 9737
+        },
+        {
+            "kind": "instantiates",
+            "total": 618
+        },
+        {
+            "kind": "route",
+            "total": 340
+        },
+        {
+            "kind": "extends",
+            "total": 265
+        },
+        {
+            "kind": "implements",
+            "total": 82
+        },
+        {
+            "kind": "uses_trait",
+            "total": 52
+        },
+        {
+            "kind": "relation_hasMany",
+            "total": 28
+        },
+        {
+            "kind": "relation_belongsTo",
+            "total": 21
+        },
+        {
+            "kind": "relation_morphMany",
+            "total": 13
+        },
+        {
+            "kind": "service_binding",
+            "total": 6
+        },
+        {
+            "kind": "relation_morphTo",
+            "total": 6
+        },
+        {
+            "kind": "relation_belongsToMany",
+            "total": 6
+        },
+        {
+            "kind": "relation_hasOne",
+            "total": 3
+        },
+        {
+            "kind": "relation_morphOne",
+            "total": 1
+        }
+    ],
+    "sample_edges": {
+        "route": [
+            {
+                "src_fqn": "\\Route",
+                "dst_fqn": "EntityControllers\\PageApiController@list",
+                "file": "routes/api.php",
+                "line": 25,
+                "metadata": "method:GET,path:pages"
+            },
+            {
+                "src_fqn": "\\Route",
+                "dst_fqn": "EntityControllers\\PageApiController@create",
+                "file": "routes/api.php",
+                "line": 26,
+                "metadata": "method:POST,path:pages"
+            },
+            {
+                "src_fqn": "\\Route",
+                "dst_fqn": "EntityControllers\\PageApiController@read",
+                "file": "routes/api.php",
+                "line": 27,
+                "metadata": "method:GET,path:pages/{id}"
+            },
+            {
+                "src_fqn": "\\Route",
+                "dst_fqn": "EntityControllers\\PageApiController@update",
+                "file": "routes/api.php",
+                "line": 28,
+                "metadata": "method:PUT,path:pages/{id}"
+            },
+            {
+                "src_fqn": "\\Route",
+                "dst_fqn": "EntityControllers\\PageApiController@delete",
+                "file": "routes/api.php",
+                "line": 29,
+                "metadata": "method:DELETE,path:pages/{id}"
+            }
+        ],
+        "calls": [
+            {
+                "src_fqn": "\\BookStack\\Access\\Controllers\\ConfirmEmailController::show",
+                "dst_fqn": "app/Config/view.php",
+                "file": "app/Access/Controllers/ConfirmEmailController.php",
+                "line": 30,
+                "metadata": null
+            },
+            {
+                "src_fqn": "\\BookStack\\Access\\Controllers\\ConfirmEmailController::showAwaiting",
+                "dst_fqn": "?::getLastLoginAttemptUser",
+                "file": "app/Access/Controllers/ConfirmEmailController.php",
+                "line": 39,
+                "metadata": null
+            },
+            {
+                "src_fqn": "\\BookStack\\Access\\Controllers\\ConfirmEmailController::showAwaiting",
+                "dst_fqn": "?::showErrorNotification",
+                "file": "app/Access/Controllers/ConfirmEmailController.php",
+                "line": 41,
+                "metadata": null
+            },
+            {
+                "src_fqn": "\\BookStack\\Access\\Controllers\\ConfirmEmailController::showAwaiting",
+                "dst_fqn": "\\BookStack\\Translation\\LocaleDefinition::trans",
+                "file": "app/Access/Controllers/ConfirmEmailController.php",
+                "line": 41,
+                "metadata": null
+            },
+            {
+                "src_fqn": "\\BookStack\\Access\\Controllers\\ConfirmEmailController::showAwaiting",
+                "dst_fqn": "\\BookStack\\Users\\Controllers\\UserAccountController::redirect",
+                "file": "app/Access/Controllers/ConfirmEmailController.php",
+                "line": 42,
+                "metadata": null
+            }
+        ],
+        "service_binding": [
+            {
+                "src_fqn": "BookStack\\App\\Providers\\AppServiceProvider",
+                "dst_fqn": "Closure",
+                "file": "app/App/Providers/AppServiceProvider.php",
+                "line": 50,
+                "metadata": "binding_type:singleton,abstract:PermissionApplicator"
+            },
+            {
+                "src_fqn": "BookStack\\App\\Providers\\AuthServiceProvider",
+                "dst_fqn": "Closure",
+                "file": "app/App/Providers/AuthServiceProvider.php",
+                "line": 69,
+                "metadata": "binding_type:singleton,abstract:users.default"
+            },
+            {
+                "src_fqn": "BookStack\\App\\Providers\\TranslationServiceProvider",
+                "dst_fqn": "Closure",
+                "file": "app/App/Providers/TranslationServiceProvider.php",
+                "line": 21,
+                "metadata": "binding_type:singleton,abstract:translator"
+            },
+            {
+                "src_fqn": "BookStack\\App\\Providers\\TranslationServiceProvider",
+                "dst_fqn": "Closure",
+                "file": "app/App/Providers/TranslationServiceProvider.php",
+                "line": 45,
+                "metadata": "binding_type:singleton,abstract:translation.loader"
+            },
+            {
+                "src_fqn": "BookStack\\App\\Providers\\ViewTweaksServiceProvider",
+                "dst_fqn": "Closure",
+                "file": "app/App/Providers/ViewTweaksServiceProvider.php",
+                "line": 20,
+                "metadata": "binding_type:singleton,abstract:DateFormatter"
+            }
+        ],
+        "relation_hasMany": [
+            {
+                "src_fqn": "BookStack\\Activity\\Models\\Activity",
+                "dst_fqn": "\\BookStack\\Permissions\\Models\\JointPermission",
+                "file": "app/Activity/Models/Activity.php",
+                "line": 51,
+                "metadata": "relation_type:hasMany"
+            },
+            {
+                "src_fqn": "BookStack\\Activity\\Models\\Comment",
+                "dst_fqn": "\\BookStack\\Permissions\\Models\\JointPermission",
+                "file": "app/Activity/Models/Comment.php",
+                "line": 105,
+                "metadata": "relation_type:hasMany"
+            },
+            {
+                "src_fqn": "BookStack\\Activity\\Models\\Favourite",
+                "dst_fqn": "\\BookStack\\Permissions\\Models\\JointPermission",
+                "file": "app/Activity/Models/Favourite.php",
+                "line": 27,
+                "metadata": "relation_type:hasMany"
+            },
+            {
+                "src_fqn": "BookStack\\Activity\\Models\\Tag",
+                "dst_fqn": "\\BookStack\\Permissions\\Models\\JointPermission",
+                "file": "app/Activity/Models/Tag.php",
+                "line": 36,
+                "metadata": "relation_type:hasMany"
+            },
+            {
+                "src_fqn": "BookStack\\Activity\\Models\\View",
+                "dst_fqn": "\\BookStack\\Permissions\\Models\\JointPermission",
+                "file": "app/Activity/Models/View.php",
+                "line": 34,
+                "metadata": "relation_type:hasMany"
+            }
+        ]
+    }
+}

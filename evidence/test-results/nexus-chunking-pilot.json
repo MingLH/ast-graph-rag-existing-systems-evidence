@@ -1,0 +1,270 @@
+{
+  "experiment": "nexus_tree_sitter_chunking_pilot",
+  "nexus_revision": "f305875dbec95e81f53d1e921e1bd10cd3ac056c",
+  "files": {
+    "fixture_controller": {
+      "file": "<RESEARCH_ROOT>/fixtures/codegraph-full-pipeline/app/Http/Controllers/UserController.php",
+      "total_chunks": 3,
+      "kinds": {
+        "class_header": 1,
+        "method": 2
+      },
+      "ids_deterministic": true,
+      "sample_chunks": [
+        {
+          "kind": "class_header",
+          "symbol": "UserController",
+          "node_id": "class:App\\Http\\Controllers\\UserController",
+          "start_line": 7,
+          "end_line": 8,
+          "preview": "class UserController public function __construct( public function show()"
+        },
+        {
+          "kind": "method",
+          "symbol": "__construct",
+          "node_id": "method:App\\Http\\Controllers\\UserController::__construct",
+          "start_line": 9,
+          "end_line": 11,
+          "preview": "public function __construct( private UserService $service ) {}"
+        },
+        {
+          "kind": "method",
+          "symbol": "show",
+          "node_id": "method:App\\Http\\Controllers\\UserController::show",
+          "start_line": 13,
+          "end_line": 18,
+          "preview": "public function show() { $result = $this->service->find(); return view('users.show', ['result' => $r"
+        }
+      ]
+    },
+    "fixture_service": {
+      "file": "<RESEARCH_ROOT>/fixtures/codegraph-full-pipeline/app/Services/UserService.php",
+      "total_chunks": 2,
+      "kinds": {
+        "class_header": 1,
+        "method": 1
+      },
+      "ids_deterministic": true,
+      "sample_chunks": [
+        {
+          "kind": "class_header",
+          "symbol": "UserService",
+          "node_id": "class:App\\Services\\UserService",
+          "start_line": 5,
+          "end_line": 6,
+          "preview": "class UserService public function find()"
+        },
+        {
+          "kind": "method",
+          "symbol": "find",
+          "node_id": "method:App\\Services\\UserService::find",
+          "start_line": 7,
+          "end_line": 10,
+          "preview": "public function find() { return 'example'; }"
+        }
+      ]
+    },
+    "fixture_multi_class_models": {
+      "file": "<RESEARCH_ROOT>/fixtures/codegraph-full-pipeline/app/Models/Entities.php",
+      "total_chunks": 3,
+      "kinds": {
+        "class_header": 2,
+        "method": 1
+      },
+      "ids_deterministic": true,
+      "sample_chunks": [
+        {
+          "kind": "class_header",
+          "symbol": "First",
+          "node_id": "class:App\\Models\\First",
+          "start_line": 5,
+          "end_line": 5,
+          "preview": "class First"
+        },
+        {
+          "kind": "class_header",
+          "symbol": "Second",
+          "node_id": "class:App\\Models\\Second",
+          "start_line": 7,
+          "end_line": 8,
+          "preview": "class Second public function posts()"
+        },
+        {
+          "kind": "method",
+          "symbol": "posts",
+          "node_id": "method:App\\Models\\Second::posts",
+          "start_line": 9,
+          "end_line": 12,
+          "preview": "public function posts() { return $this->hasMany(Post::class); }"
+        }
+      ]
+    },
+    "fixture_routes": {
+      "file": "<RESEARCH_ROOT>/fixtures/codegraph-full-pipeline/routes/web.php",
+      "total_chunks": 0,
+      "kinds": {},
+      "ids_deterministic": true,
+      "sample_chunks": []
+    },
+    "bookstack_controller": {
+      "file": "<BOOKSTACK_ROOT>/app/Access/Controllers/ConfirmEmailController.php",
+      "total_chunks": 7,
+      "kinds": {
+        "class_header": 1,
+        "method": 6
+      },
+      "ids_deterministic": true,
+      "sample_chunks": [
+        {
+          "kind": "class_header",
+          "symbol": "ConfirmEmailController",
+          "node_id": "class:BookStack\\Access\\Controllers\\ConfirmEmailController",
+          "start_line": 15,
+          "end_line": 16,
+          "preview": "class ConfirmEmailController extends Controller public function __construct( public function show() "
+        },
+        {
+          "kind": "method",
+          "symbol": "__construct",
+          "node_id": "method:BookStack\\Access\\Controllers\\ConfirmEmailController::__construct",
+          "start_line": 17,
+          "end_line": 22,
+          "preview": "public function __construct( protected EmailConfirmationService $emailConfirmationService, protected"
+        },
+        {
+          "kind": "method",
+          "symbol": "show",
+          "node_id": "method:BookStack\\Access\\Controllers\\ConfirmEmailController::show",
+          "start_line": 28,
+          "end_line": 31,
+          "preview": "public function show() { return view('auth.register-confirm'); }"
+        },
+        {
+          "kind": "method",
+          "symbol": "showAwaiting",
+          "node_id": "method:BookStack\\Access\\Controllers\\ConfirmEmailController::showAwaiting",
+          "start_line": 37,
+          "end_line": 46,
+          "preview": "public function showAwaiting() { $user = $this->loginService->getLastLoginAttemptUser(); if ($user ="
+        },
+        {
+          "kind": "method",
+          "symbol": "showAcceptForm",
+          "node_id": "method:BookStack\\Access\\Controllers\\ConfirmEmailController::showAcceptForm",
+          "start_line": 51,
+          "end_line": 54,
+          "preview": "public function showAcceptForm(string $token) { return view('auth.register-confirm-accept', ['token'"
+        },
+        {
+          "kind": "method",
+          "symbol": "confirm",
+          "node_id": "method:BookStack\\Access\\Controllers\\ConfirmEmailController::confirm",
+          "start_line": 62,
+          "end_line": 92,
+          "preview": "public function confirm(Request $request) { $validated = $this->validate($request, [ 'token' => ['re"
+        },
+        {
+          "kind": "method",
+          "symbol": "resend",
+          "node_id": "method:BookStack\\Access\\Controllers\\ConfirmEmailController::resend",
+          "start_line": 97,
+          "end_line": 120,
+          "preview": "public function resend() { $user = $this->loginService->getLastLoginAttemptUser(); if ($user === nul"
+        }
+      ]
+    },
+    "bookstack_model": {
+      "file": "<BOOKSTACK_ROOT>/app/Activity/Models/Comment.php",
+      "total_chunks": 9,
+      "kinds": {
+        "class_header": 1,
+        "method": 8
+      },
+      "ids_deterministic": true,
+      "sample_chunks": [
+        {
+          "kind": "class_header",
+          "symbol": "Comment",
+          "node_id": "class:BookStack\\Activity\\Models\\Comment",
+          "start_line": 30,
+          "end_line": 31,
+          "preview": "/** * @property int $id * @property string $html * @property int|null $parent_id - Relates to local_"
+        },
+        {
+          "kind": "method",
+          "symbol": "entity",
+          "node_id": "method:BookStack\\Activity\\Models\\Comment::entity",
+          "start_line": 48,
+          "end_line": 65,
+          "preview": "public function entity(): MorphTo { // We specifically define null here to avoid the different name "
+        },
+        {
+          "kind": "method",
+          "symbol": "parent",
+          "node_id": "method:BookStack\\Activity\\Models\\Comment::parent",
+          "start_line": 71,
+          "end_line": 76,
+          "preview": "public function parent(): BelongsTo { return $this->belongsTo(Comment::class, 'parent_id', 'local_id"
+        },
+        {
+          "kind": "method",
+          "symbol": "isUpdated",
+          "node_id": "method:BookStack\\Activity\\Models\\Comment::isUpdated",
+          "start_line": 81,
+          "end_line": 84,
+          "preview": "public function isUpdated(): bool { return $this->updated_at->timestamp > $this->created_at->timesta"
+        },
+        {
+          "kind": "method",
+          "symbol": "logDescriptor",
+          "node_id": "method:BookStack\\Activity\\Models\\Comment::logDescriptor",
+          "start_line": 86,
+          "end_line": 89,
+          "preview": "public function logDescriptor(): string { return \"Comment #{$this->local_id} (ID: {$this->id}) for {"
+        },
+        {
+          "kind": "method",
+          "symbol": "safeHtml",
+          "node_id": "method:BookStack\\Activity\\Models\\Comment::safeHtml",
+          "start_line": 91,
+          "end_line": 95,
+          "preview": "public function safeHtml(): string { $filter = new HtmlContentFilter(new HtmlContentFilterConfig());"
+        },
+        {
+          "kind": "method",
+          "symbol": "getPlainText",
+          "node_id": "method:BookStack\\Activity\\Models\\Comment::getPlainText",
+          "start_line": 97,
+          "end_line": 101,
+          "preview": "public function getPlainText(): string { $converter = new HtmlToPlainText(); return $converter->conv"
+        },
+        {
+          "kind": "method",
+          "symbol": "jointPermissions",
+          "node_id": "method:BookStack\\Activity\\Models\\Comment::jointPermissions",
+          "start_line": 103,
+          "end_line": 107,
+          "preview": "public function jointPermissions(): HasMany { return $this->hasMany(JointPermission::class, 'entity_"
+        },
+        {
+          "kind": "method",
+          "symbol": "scopeVisible",
+          "node_id": "method:BookStack\\Activity\\Models\\Comment::scopeVisible",
+          "start_line": 113,
+          "end_line": 117,
+          "preview": "public function scopeVisible(Builder $query): Builder { return app()->make(PermissionApplicator::cla"
+        }
+      ]
+    }
+  },
+  "checks": {
+    "all_chunk_ids_deterministic": true,
+    "controller_show_method_found": true,
+    "second_posts_method_found": true,
+    "posts_not_misattributed_to_first": true,
+    "bookstack_comment_parent_found": true,
+    "route_file_has_no_semantic_chunks": true,
+    "method_chunk_text_matches_source": true
+  },
+  "total_chunks": 24
+}

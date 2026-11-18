@@ -1,0 +1,66 @@
+{
+    "framework": "Laravel 12",
+    "mode": "registered_router_and_container",
+    "report": {
+        "mode": "full",
+        "files_seen": 7,
+        "files_changed": 7,
+        "files_affected": 0,
+        "files_deleted": 0,
+        "nodes": 36,
+        "edges": 30,
+        "unresolved": 1,
+        "duration_seconds": 0.314,
+        "warnings": []
+    },
+    "registered_routes": 9,
+    "checks": {
+        "direct_route_to_controller": true,
+        "resource_show_route": true,
+        "greeting_route_to_controller": true,
+        "interface_to_implementation": true,
+        "controller_to_implementation_method": true
+    },
+    "selected_edges": [
+        {
+            "type": "binds",
+            "source": "class:FypPilot\\Greeter",
+            "destination": "class:FypPilot\\FriendlyGreeter",
+            "resolution": null,
+            "confidence": null,
+            "meta": "{\"singleton\":false}"
+        },
+        {
+            "type": "calls",
+            "source": "method:FypPilot\\GreetingController::show",
+            "destination": "method:FypPilot\\FriendlyGreeter::greet",
+            "resolution": "container",
+            "confidence": 1,
+            "meta": "{\"member\":\"greet\"}"
+        },
+        {
+            "type": "routes_to",
+            "source": "route:GET /fyp-greeting",
+            "destination": "method:FypPilot\\GreetingController::show",
+            "resolution": null,
+            "confidence": null,
+            "meta": null
+        },
+        {
+            "type": "routes_to",
+            "source": "route:GET /resources/{resource}",
+            "destination": "method:App\\Http\\Controllers\\UserController::show",
+            "resolution": null,
+            "confidence": null,
+            "meta": null
+        },
+        {
+            "type": "routes_to",
+            "source": "route:GET /users",
+            "destination": "method:App\\Http\\Controllers\\UserController::show",
+            "resolution": null,
+            "confidence": null,
+            "meta": null
+        }
+    ]
+}

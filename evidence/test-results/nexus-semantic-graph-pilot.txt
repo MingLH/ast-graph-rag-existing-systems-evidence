@@ -1,0 +1,71 @@
+2026-11-13 23:06:38 [debug    ] tool_executed                  duration_ms=26.66 tool=semantic_search
+{
+  "experiment": "nexus_semantic_graph_pilot",
+  "embedding": "controlled_synthetic_vectors",
+  "input": "tests/fixtures/reflection-samples/demoapp.json",
+  "graph_nodes": 594,
+  "graph_edges": 527,
+  "builder_warning_codes": {
+    "closure_listener": 12
+  },
+  "vector_rows": 3,
+  "raw_hits": [
+    {
+      "id": "controlled-index",
+      "score": 1.0
+    },
+    {
+      "id": "controlled-class",
+      "score": 0.8
+    },
+    {
+      "id": "controlled-show",
+      "score": 0.0
+    }
+  ],
+  "semantic_result": {
+    "error": null,
+    "total_candidates": 3,
+    "returned": 3,
+    "hits": [
+      {
+        "node_id": "method:App\\Http\\Controllers\\CustomersController::index",
+        "kind": "method",
+        "vector_score": 1.0,
+        "reranked_score": 1.2,
+        "container_class": "App\\Http\\Controllers\\CustomersController",
+        "related_routes": [
+          "GET /api/v1/customers"
+        ]
+      },
+      {
+        "node_id": "class:App\\Http\\Controllers\\CustomersController",
+        "kind": "controller",
+        "vector_score": 0.8,
+        "reranked_score": 0.84,
+        "container_class": null,
+        "related_routes": []
+      },
+      {
+        "node_id": "method:App\\Http\\Controllers\\CustomersController::show",
+        "kind": "method",
+        "vector_score": 0.0,
+        "reranked_score": 0.0,
+        "container_class": "App\\Http\\Controllers\\CustomersController",
+        "related_routes": [
+          "GET /api/v1/customers/{customer}"
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "graph_build_ok": true,
+    "three_vectors_stored": true,
+    "raw_search_returns_hits": true,
+    "semantic_query_succeeds": true,
+    "method_hit_found": true,
+    "owning_class_attached": true,
+    "route_annotation_attached": true,
+    "no_new_graph_candidates_added": true
+  }
+}

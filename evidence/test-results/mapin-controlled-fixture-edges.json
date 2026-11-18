@@ -1,0 +1,184 @@
+{
+  "edges": [
+    {
+      "type": "declares",
+      "source": "file:app/Http/Controllers/UserController.php",
+      "destination": "class:App\\Http\\Controllers\\UserController",
+      "file": "app/Http/Controllers/UserController.php",
+      "line": null,
+      "resolution": null,
+      "confidence": null,
+      "meta": null
+    },
+    {
+      "type": "declares",
+      "source": "class:App\\Http\\Controllers\\UserController",
+      "destination": "method:App\\Http\\Controllers\\UserController::__construct",
+      "file": "app/Http/Controllers/UserController.php",
+      "line": null,
+      "resolution": null,
+      "confidence": null,
+      "meta": null
+    },
+    {
+      "type": "declares",
+      "source": "class:App\\Http\\Controllers\\UserController",
+      "destination": "method:App\\Http\\Controllers\\UserController::show",
+      "file": "app/Http/Controllers/UserController.php",
+      "line": null,
+      "resolution": null,
+      "confidence": null,
+      "meta": null
+    },
+    {
+      "type": "calls",
+      "source": "method:App\\Http\\Controllers\\UserController::show",
+      "destination": "method:App\\Services\\UserService::find",
+      "file": "app/Http/Controllers/UserController.php",
+      "line": 15,
+      "resolution": "typed_property",
+      "confidence": 1.0,
+      "meta": "{\"member\":\"find\"}"
+    },
+    {
+      "type": "renders",
+      "source": "method:App\\Http\\Controllers\\UserController::show",
+      "destination": "view:users.show",
+      "file": "app/Http/Controllers/UserController.php",
+      "line": 17,
+      "resolution": null,
+      "confidence": null,
+      "meta": null
+    },
+    {
+      "type": "declares",
+      "source": "file:app/Models/Entities.php",
+      "destination": "class:App\\Models\\First",
+      "file": "app/Models/Entities.php",
+      "line": null,
+      "resolution": null,
+      "confidence": null,
+      "meta": null
+    },
+    {
+      "type": "declares",
+      "source": "file:app/Models/Entities.php",
+      "destination": "class:App\\Models\\Second",
+      "file": "app/Models/Entities.php",
+      "line": null,
+      "resolution": null,
+      "confidence": null,
+      "meta": null
+    },
+    {
+      "type": "declares",
+      "source": "class:App\\Models\\Second",
+      "destination": "method:App\\Models\\Second::posts",
+      "file": "app/Models/Entities.php",
+      "line": null,
+      "resolution": null,
+      "confidence": null,
+      "meta": null
+    },
+    {
+      "type": "relates",
+      "source": "class:App\\Models\\Second",
+      "destination": "class:App\\Models\\Post",
+      "file": "app/Models/Entities.php",
+      "line": null,
+      "resolution": null,
+      "confidence": null,
+      "meta": "{\"relation\":\"hasMany\",\"method\":\"posts\"}"
+    },
+    {
+      "type": "calls",
+      "source": "method:App\\Models\\Second::posts",
+      "destination": "class:App\\Models\\Second",
+      "file": "app/Models/Entities.php",
+      "line": 11,
+      "resolution": "this",
+      "confidence": 1.0,
+      "meta": "{\"member\":\"hasMany\"}"
+    },
+    {
+      "type": "declares",
+      "source": "file:app/Models/Post.php",
+      "destination": "class:App\\Models\\Post",
+      "file": "app/Models/Post.php",
+      "line": null,
+      "resolution": null,
+      "confidence": null,
+      "meta": null
+    },
+    {
+      "type": "declares",
+      "source": "file:app/Services/RuleBuilder.php",
+      "destination": "class:App\\Services\\RuleBuilder",
+      "file": "app/Services/RuleBuilder.php",
+      "line": null,
+      "resolution": null,
+      "confidence": null,
+      "meta": null
+    },
+    {
+      "type": "declares",
+      "source": "class:App\\Services\\RuleBuilder",
+      "destination": "method:App\\Services\\RuleBuilder::make",
+      "file": "app/Services/RuleBuilder.php",
+      "line": null,
+      "resolution": null,
+      "confidence": null,
+      "meta": null
+    },
+    {
+      "type": "declares",
+      "source": "file:app/Services/UserService.php",
+      "destination": "class:App\\Services\\UserService",
+      "file": "app/Services/UserService.php",
+      "line": null,
+      "resolution": null,
+      "confidence": null,
+      "meta": null
+    },
+    {
+      "type": "declares",
+      "source": "class:App\\Services\\UserService",
+      "destination": "method:App\\Services\\UserService::find",
+      "file": "app/Services/UserService.php",
+      "line": null,
+      "resolution": null,
+      "confidence": null,
+      "meta": null
+    },
+    {
+      "type": "calls",
+      "source": "file:routes/web.php",
+      "destination": "external:Illuminate\\Support\\Facades\\Route",
+      "file": "routes/web.php",
+      "line": 5,
+      "resolution": "static",
+      "confidence": 1.0,
+      "meta": "{\"member\":\"get\"}"
+    },
+    {
+      "type": "calls",
+      "source": "file:routes/web.php",
+      "destination": "external:Illuminate\\Support\\Facades\\Route",
+      "file": "routes/web.php",
+      "line": 7,
+      "resolution": "static",
+      "confidence": 1.0,
+      "meta": "{\"member\":\"resource\"}"
+    }
+  ],
+  "unresolved": [
+    {
+      "file": "app/Services/RuleBuilder.php",
+      "line": 9,
+      "kind": "calls",
+      "expression": "$this->builder->bind('A', 'B')",
+      "receiver_hint": null,
+      "member": "bind"
+    }
+  ]
+}

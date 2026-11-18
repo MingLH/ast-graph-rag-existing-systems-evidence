@@ -1,0 +1,49 @@
+........................................................................ [  5%]
+......................................................ssssssssssssssssss [ 11%]
+....ssssss.....................s...................................ssss. [ 16%]
+........................................................................ [ 22%]
+........................................................................ [ 28%]
+........................................................................ [ 33%]
+........................................................................ [ 39%]
+........................................................................ [ 45%]
+........................................................................ [ 50%]
+........................................................................ [ 56%]
+........................................................................ [ 62%]
+........................................................................ [ 67%]
+........................................................................ [ 73%]
+........................................................................ [ 79%]
+........................................................................ [ 84%]
+........................................................................ [ 90%]
+........................................................................ [ 96%]
+...............................................                          [100%]
+=========================== short test summary info ============================
+SKIPPED [1] tests/e2e/package/test_query_package_index.py:47: Set RUN_E2E=1 and RUN_PACKAGE_INTEGRATION=1 to run package E2E tests.
+SKIPPED [1] tests/integration/package/test_dirty_working_tree.py:13: Set RUN_PACKAGE_INTEGRATION=1 to run package integration tests.
+SKIPPED [1] tests/integration/package/test_embedder_wiring.py:40: Set RUN_PACKAGE_INTEGRATION=1 to run package integration tests.
+SKIPPED [1] tests/integration/package/test_embedder_wiring.py:57: Set RUN_PACKAGE_INTEGRATION=1 to run package integration tests.
+SKIPPED [1] tests/integration/package/test_embedder_wiring.py:74: Set RUN_PACKAGE_INTEGRATION=1 to run package integration tests.
+SKIPPED [1] tests/integration/package/test_inrepo_mode_end_to_end.py:45: Set RUN_PACKAGE_INTEGRATION=1 to run package integration tests.
+SKIPPED [1] tests/integration/package/test_inrepo_mode_end_to_end.py:66: Set RUN_PACKAGE_INTEGRATION=1 to run package integration tests.
+SKIPPED [1] tests/integration/package/test_nexus_driven_mode_end_to_end.py:25: Set RUN_PACKAGE_INTEGRATION=1 to run package integration tests.
+SKIPPED [1] tests/integration/package/test_nexus_driven_mode_end_to_end.py:53: Set RUN_PACKAGE_INTEGRATION=1 to run package integration tests.
+SKIPPED [1] tests/integration/package/test_nexus_driven_mode_end_to_end.py:71: Set RUN_PACKAGE_INTEGRATION=1 to run package integration tests.
+SKIPPED [1] tests/integration/package/test_nexus_driven_mode_end_to_end.py:92: Set RUN_PACKAGE_INTEGRATION=1 to run package integration tests.
+SKIPPED [1] tests/integration/package/test_nexus_driven_mode_end_to_end.py:128: Set RUN_PACKAGE_INTEGRATION=1 to run package integration tests.
+SKIPPED [1] tests/integration/package/test_nexus_driven_mode_end_to_end.py:146: Set RUN_PACKAGE_INTEGRATION=1 to run package integration tests.
+SKIPPED [1] tests/integration/package/test_nexus_driven_mode_end_to_end.py:166: Set RUN_PACKAGE_INTEGRATION=1 to run package integration tests.
+SKIPPED [1] tests/integration/package/test_nexus_driven_mode_end_to_end.py:200: Set RUN_PACKAGE_INTEGRATION=1 to run package integration tests.
+SKIPPED [1] tests/integration/package/test_scratch_invalidation_source_git.py:13: Set RUN_PACKAGE_INTEGRATION=1 to run package integration tests.
+SKIPPED [1] tests/integration/package/test_scratch_invalidation_source_nongit.py:12: Set RUN_PACKAGE_INTEGRATION=1 to run package integration tests.
+SKIPPED [1] tests/integration/package/test_workbench_filter.py:13: Set RUN_PACKAGE_INTEGRATION=1 to run package integration tests.
+SKIPPED [1] tests/integration/test_fastembed.py:31: fastembed downloads a model; set NEXUS_RUN_FASTEMBED=1 to run
+SKIPPED [1] tests/integration/test_fastembed.py:35: fastembed downloads a model; set NEXUS_RUN_FASTEMBED=1 to run
+SKIPPED [1] tests/integration/test_fastembed.py:41: fastembed downloads a model; set NEXUS_RUN_FASTEMBED=1 to run
+SKIPPED [1] tests/integration/test_fastembed.py:47: fastembed downloads a model; set NEXUS_RUN_FASTEMBED=1 to run
+SKIPPED [1] tests/integration/test_fastembed.py:51: fastembed downloads a model; set NEXUS_RUN_FASTEMBED=1 to run
+SKIPPED [1] tests/integration/test_fastembed.py:57: fastembed downloads a model; set NEXUS_RUN_FASTEMBED=1 to run
+SKIPPED [1] tests/integration/test_lsp_client.py:60: No LSP server (intelephense/phpactor) available.
+SKIPPED [1] tests/integration/test_ollama_embedder.py:34: Requires a running Ollama daemon; set NEXUS_RUN_OLLAMA=1 to run
+SKIPPED [1] tests/integration/test_ollama_embedder.py:40: Requires a running Ollama daemon; set NEXUS_RUN_OLLAMA=1 to run
+SKIPPED [1] tests/integration/test_ollama_embedder.py:47: Requires a running Ollama daemon; set NEXUS_RUN_OLLAMA=1 to run
+SKIPPED [1] tests/integration/test_ollama_embedder.py:51: Requires a running Ollama daemon; set NEXUS_RUN_OLLAMA=1 to run
+1242 passed, 29 skipped in 46.14s

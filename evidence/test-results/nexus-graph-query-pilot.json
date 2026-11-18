@@ -1,0 +1,90 @@
+2026-11-13 22:57:31 [debug    ] tool_executed                  duration_ms=9.49 tool=list_routes
+2026-11-13 22:57:31 [debug    ] tool_executed                  duration_ms=0.47 tool=describe_class
+{
+  "experiment": "nexus_graph_query_pilot",
+  "input": "tests/fixtures/reflection-samples/demoapp.json",
+  "nodes": 594,
+  "edges": 527,
+  "nodes_by_kind": {
+    "binding": 230,
+    "class": 52,
+    "command": 6,
+    "controller": 13,
+    "event": 17,
+    "form_request": 6,
+    "listener": 15,
+    "method": 214,
+    "middleware": 12,
+    "model": 2,
+    "route": 23,
+    "scheduled_task": 2,
+    "service_provider": 2
+  },
+  "edges_by_kind": {
+    "bound_to": 72,
+    "dispatches": 1,
+    "extends": 44,
+    "fires": 1,
+    "has_middleware": 70,
+    "implements": 80,
+    "listens_to": 15,
+    "part_of": 214,
+    "routes_to": 19,
+    "uses_trait": 5,
+    "validates_with": 6
+  },
+  "builder_warning_count": 12,
+  "route_query_total": 23,
+  "route_edges_sample": [
+    {
+      "source": "route:POST:/api/v1/auth/logout",
+      "target": "method:App\\Http\\Controllers\\Auth\\LogoutController::__invoke"
+    },
+    {
+      "source": "route:POST:/api/v1/auth/refresh",
+      "target": "method:App\\Http\\Controllers\\Auth\\RefreshController::__invoke"
+    },
+    {
+      "source": "route:POST:/api/v1/auth/token",
+      "target": "method:App\\Http\\Controllers\\Auth\\TokenController::__invoke"
+    },
+    {
+      "source": "route:GET:/api/v1/customers",
+      "target": "method:App\\Http\\Controllers\\CustomersController::index"
+    },
+    {
+      "source": "route:POST:/api/v1/customers",
+      "target": "method:App\\Http\\Controllers\\CustomersController::store"
+    },
+    {
+      "source": "route:GET:/api/v1/customers/sync",
+      "target": "method:App\\Http\\Controllers\\CustomerSyncController::index"
+    },
+    {
+      "source": "route:GET:/api/v1/customers/{customer}",
+      "target": "method:App\\Http\\Controllers\\CustomersController::show"
+    },
+    {
+      "source": "route:PUT:/api/v1/customers/{customer}",
+      "target": "method:App\\Http\\Controllers\\CustomersController::update"
+    },
+    {
+      "source": "route:GET:/api/v1/customers/{customer}/eligibility",
+      "target": "method:App\\Http\\Controllers\\CustomerEligibilityController::__invoke"
+    },
+    {
+      "source": "route:GET:/api/v1/customers/{customer}/orders",
+      "target": "method:App\\Http\\Controllers\\CustomerOrdersController::index"
+    }
+  ],
+  "checks": {
+    "graph_build_succeeded": true,
+    "graph_build_deterministic": true,
+    "route_nodes_match_reflection": true,
+    "controller_routes_match_edges": true,
+    "methods_have_part_of_edges": true,
+    "list_routes_returns_records": true,
+    "customer_controller_found": true,
+    "customer_controller_has_routes": true
+  }
+}

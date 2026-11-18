@@ -1,0 +1,66 @@
+{
+    "stats": {
+        "symbols": 12,
+        "edges": 7,
+        "chunks": 12,
+        "files": 6
+    },
+    "edges": [
+        {
+            "kind": "calls",
+            "src_fqn": "\\App\\Http\\Controllers\\UserController::show",
+            "dst_fqn": "?::find",
+            "file": "app/Http/Controllers/UserController.php",
+            "line": 15,
+            "metadata": null
+        },
+        {
+            "kind": "calls",
+            "src_fqn": "\\App\\Http\\Controllers\\UserController::show",
+            "dst_fqn": "view",
+            "file": "app/Http/Controllers/UserController.php",
+            "line": 17,
+            "metadata": null
+        },
+        {
+            "kind": "calls",
+            "src_fqn": "\\App\\Models\\Second::posts",
+            "dst_fqn": "?::hasMany",
+            "file": "app/Models/Entities.php",
+            "line": 11,
+            "metadata": null
+        },
+        {
+            "kind": "relation_hasMany",
+            "src_fqn": "App\\Models\\First",
+            "dst_fqn": "\\App\\Models\\Post",
+            "file": "app/Models/Entities.php",
+            "line": 11,
+            "metadata": "relation_type:hasMany"
+        },
+        {
+            "kind": "calls",
+            "src_fqn": "\\App\\Services\\RuleBuilder::make",
+            "dst_fqn": "?::bind",
+            "file": "app/Services/RuleBuilder.php",
+            "line": 9,
+            "metadata": null
+        },
+        {
+            "kind": "service_binding",
+            "src_fqn": "App\\Services\\RuleBuilder",
+            "dst_fqn": "B",
+            "file": "app/Services/RuleBuilder.php",
+            "line": 9,
+            "metadata": "binding_type:bind,abstract:A"
+        },
+        {
+            "kind": "route",
+            "src_fqn": "\\Route",
+            "dst_fqn": "UserController@show",
+            "file": "routes/web.php",
+            "line": 5,
+            "metadata": "method:GET,path:/users"
+        }
+    ]
+}

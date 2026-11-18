@@ -1,0 +1,21 @@
+PHPUnit 12.5.44 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.5.0
+Configuration: <RESEARCH_ROOT>/runtime-labs/nexus/packages/nexus-extractor-php/phpunit.xml
+Random Seed:   1794578835
+
+[33;1mD[0m[41;37mF[0m[33;1mD[0m[33;1mD[0m[33;1mD[0m[33;1mD[0m[33;1mD[0m[33;1mD[0m..........................[33;1mD[0m[33;1mD[0m...........................  63 / 163 ( 38%)
+................................[33;1mD[0m[33;1mD[0m[33;1mD[0m[33;1mD[0m........................... 126 / 163 ( 77%)
+.....................................                           163 / 163 (100%)
+
+Time: 00:01.511, Memory: 46.50 MB
+
+There was 1 failure:
+
+1) Nexus\Extractor\Tests\Feature\Console\ExtractPackageCommandTest::test_extracts_sample_fixture_with_kind_package
+Failed asserting that null is identical to 'Synthetic Laravel package fixture for Nexus package-indexing tests.'.
+
+<RESEARCH_ROOT>/runtime-labs/nexus/packages/nexus-extractor-php/tests/Feature/Console/ExtractPackageCommandTest.php:66
+
+[37;41mFAILURES![0m
+[37;41mTests: 163[0m[37;41m, Assertions: 400[0m[37;41m, Failures: 1[0m[37;41m, Deprecations: 2[0m[37;41m.[0m

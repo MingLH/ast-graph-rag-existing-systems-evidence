@@ -1,0 +1,8 @@
+===== codegraph-laravel =====
+543b5ba320653e3206aebcff27c22ffda095c1d9 | 2026-08-23T11:22:38+02:00 | update packages, drop php <8.4 support
+===== codegraph-core =====
+0fd5b9a86939efdaa7f71ef462a4e1c47c064e21 | 2026-08-23T11:14:15+02:00 | update packages, drop php <8.4 support
+===== mapin =====
+9ae585e9b1b025d298ba709c55969152ea37bc76 | 2026-11-08T23:12:30-03:00 | docs: CHANGELOG for 0.2.6
+===== nexus =====
+f305875dbec95e81f53d1e921e1bd10cd3ac056c | 2026-10-05T18:29:18+00:00 | chore(release): v1.4.1 (#13)
